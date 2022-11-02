@@ -1,0 +1,13 @@
+.account-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.form-field {
+    display: flex;
+flex-direction: column;
+}
+.label-container{
+
+}

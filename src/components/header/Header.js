@@ -1,16 +1,24 @@
-import React from 'react';
-import {NavLink} from "react-router-dom";
+import React, {useContext} from 'react';
+import {Link, NavLink, Redirect} from "react-router-dom";
 import './Header.css';
+import logo from '../../assets/logo/Logo-Koolhydraten-teller.png';
+import {AuthContext} from "../../context/AuthContext";
 
-const Header = () => {
+function Header(){
+    const { isAuth, logout} = useContext(AuthContext)
+
     return (
         <div className="nav-container">
-            <div className="logo-container">Logo</div>
+            <div className="logo-container"> <Link to="/home"><img src={logo} alt="koolhydraten"/></Link></div>
             <nav className="nav-list">
                 <ul>
-                    <li><NavLink to="/account">Mijn account</NavLink></li>
-                    <li><NavLink exact to="/">Mijn Menu's</NavLink></li>
-                    <li><NavLink exact to="/">Uitloggen</NavLink></li>
+                    <li>{ isAuth ? <NavLink to="/account">Mijn account</NavLink> : <Redirect to='/home'/>}</li>
+
+                    {!isAuth ?
+                        <li><NavLink to="/inloggen">Inloggen</NavLink></li>
+                        :
+                        <li><NavLink onClick={logout} to="/home">Uitloggen</NavLink></li>
+                    }
                 </ul>
             </nav>
         </div>

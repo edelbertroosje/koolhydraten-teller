@@ -4,12 +4,12 @@
     background-color: #BACBBF;
     align-items: center;
     border-radius: 15px;
-    margin: 15px;
+    margin: 15px 0px 15px 0px;
     color: whitesmoke;
 
 }
-.logo-container {
-    font-size: 1.5rem;
+.logo-container img {
+   width: 150px;
     margin: .5rem;
 }
 .nav-list ul {

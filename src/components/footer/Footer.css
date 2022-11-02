@@ -1,0 +1,16 @@
+.footer-container{
+    background-color: #BACBBF;
+    border-radius: 15px;
+    margin: 15px 0px 15px 0px;
+
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.links-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}

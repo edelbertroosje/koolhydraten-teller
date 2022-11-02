@@ -1,0 +1,54 @@
+.homepage-container {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid darkgoldenrod;
+    flex-wrap: wrap;
+
+
+}
+.left-container {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 595px;
+    border: 1px solid purple;
+    text-align: start;
+    flex-grow: 1;
+}
+.left-container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.left-container p {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+.home-form-container {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid green;
+    justify-content: space-between;
+}
+.home-form-container input {
+    height: 35px;
+    border-radius: 15px;
+    padding: 10px;
+    border-color: #BACBBF;
+    margin-bottom: 10px;
+}
+/*aanpassing in the right container*/
+.right-container {
+    background-color: white;
+    flex-basis: 595px;
+    border: 1px solid darkblue;
+    flex-grow: 1;
+}
+.right-container img{
+    height: 400px;
+    width: 595px;
+    flex-grow: 1;
+
+}
