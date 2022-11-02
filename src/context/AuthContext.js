@@ -12,7 +12,6 @@ function AuthContextProvider({children}){
         user: null,
         status: "pending",
     });
-
     useEffect(()=> {
         console.log('de context is zojuist opnieuw opgestart!')
         //is er een token
@@ -33,7 +32,6 @@ function AuthContextProvider({children}){
                 status: 'done'})
         }
     },[])
-
     async function fetchUserData(token){
         try{
             const response = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/user`,{
@@ -75,10 +73,8 @@ function AuthContextProvider({children}){
             user: null,
             status: "done",
         });
-
         history.push('/home')
     }
-
     const contextData = {
         isAuth: isAuth,
         user: isAuth.user,

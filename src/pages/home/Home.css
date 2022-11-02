@@ -1,25 +1,25 @@
 .homepage-container {
     display: flex;
     flex-direction: row;
-    border: 1px solid darkgoldenrod;
     flex-wrap: wrap;
-
-
 }
 .left-container {
     display: flex;
     flex-direction: column;
-    flex-basis: 595px;
-    border: 1px solid purple;
+    flex-basis: 585px;
     text-align: start;
     flex-grow: 1;
 }
 .left-container h1 {
+    padding-left: 15px;
+    padding-right: 15px;
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 .left-container p {
+    padding-left: 15px;
+    padding-right: 15px;
     font-size: 16px;
     font-weight: bold;
     color: black;
@@ -29,26 +29,42 @@
 .home-form-container {
     display: flex;
     flex-direction: row;
-    border: 1px solid green;
-    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .home-form-container input {
-    height: 35px;
+    height: 50px;
     border-radius: 15px;
-    padding: 10px;
     border-color: #BACBBF;
     margin-bottom: 10px;
+    margin-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 /*aanpassing in the right container*/
 .right-container {
     background-color: white;
-    flex-basis: 595px;
-    border: 1px solid darkblue;
+    flex-basis: 585px;
+    border: 1px solid #BACBBF;
     flex-grow: 1;
+    border-radius: 25px;
 }
 .right-container img{
-    height: 400px;
-    width: 595px;
     flex-grow: 1;
+    max-width: 545px;
+}
+.product-container{
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+}
+.product-name-container {
+    text-align: start;
+   padding-left: 50px;
+    padding-right: 50px;
+}
+.img-container {
+    background-color: #F8F9FA;
+
 
 }

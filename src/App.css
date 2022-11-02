@@ -1,21 +1,21 @@
 * {
     box-sizing: border-box;
     color: #2E543A;
+    font-family: 'Inter', sans-serif;
 }
 body {
     padding: 0;
     margin: 0;
     text-align: center;
+    background-color: #F8F9FA;
 }
 .outer-container{
-    border: 1px solid blue;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .inner-container{
-    border: 1px solid darkgreen;
     display: flex;
     flex-direction: column;
     flex-basis: 1200px;

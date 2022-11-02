@@ -1,16 +1,28 @@
-.footer-container{
+.footer-container {
     background-color: #BACBBF;
     border-radius: 15px;
-    margin: 15px 0px 15px 0px;
-
-    text-align: center;
+    margin: 100px 0 15px;
+    text-align: start;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
+    padding: 25px;
+}
+.footer-container h3{
+    font-weight: bold;
+    font-size: 22px;
 }
 .links-container {
+    font-style: italic;
     display: flex;
     flex-direction: column;
     align-content: center;
+}
+.contact-container p {
+    line-height: 8px;
+    font-style: italic;
+}
+.social-media-container img {
+    margin-right: 15px;
+
 }

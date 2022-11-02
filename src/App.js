@@ -6,6 +6,7 @@ import { Route, Switch} from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import Inloggen from "./pages/inlog-pagina/Inloggen";
+import Privacy from "./pages/privacy/Privacy";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/account"><Account/></Route>
                     <Route path="/registreren"><Registreren/></Route>
                     <Route path="/inloggen"><Inloggen/></Route>
+                    <Route path="/privacy"><Privacy/></Route>
                 </Switch>
                 <Footer />
             </div>

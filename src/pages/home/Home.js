@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import './Home.css';
 import salad from '../../assets/img/foto-home.png';
 import FormLabel from "../../components/form-label/FormLabel";
@@ -36,36 +36,42 @@ function Home() {
                     <FormLabel
                         name="Voornaam" inputType="text" placeHolder="banaan" size="50"
                         register={register} errors={errors} validationObject={{
-                        required: "input mag niet leeg zijn",
-                    }}
+                        required: "input mag niet leeg zijn"}}
                     />
                     <Button name="zoeken" type="submit"/>
                 </form>
             </div>
             <div className="right-container">
                 {!toggleDiv ?
-                    <div><img src={salad} alt=""/></div> :
-                <div>
-                    {Object.keys(productData).length > 0 &&
-                        <section>
-
-                            <div>
-                                <h1>Voedingstoffen</h1>
-                                <p>Deze waarden gelden voor het onbereide product.</p>
-                                <h1>{productData.ingredients[0].text}</h1>
-                                <ul>
-                                    <p>{productData.totalNutrients.ENERC_KCAL.label} {Math.round (productData.totalNutrients.ENERC_KCAL.quantity*100)/100} {productData.totalNutrients.ENERC_KCAL.unit}</p>
-                                    <p>{productData.totalNutrients.FAT.label} {Math.round (productData.totalNutrients.FAT.quantity*100)/100} {productData.totalNutrients.FAT.unit}</p>
-                                    <p>{productData.totalNutrients.FIBTG.label}(vezels) {Math.round (productData.totalNutrients.FIBTG.quantity*100)/100} {productData.totalNutrients.FIBTG.unit}</p>
-                                    <p>{productData.totalNutrients.PROCNT.label} {Math.round (productData.totalNutrients.PROCNT.quantity*100)/100} {productData.totalNutrients.PROCNT.unit}</p>
-                                    <p>{productData.totalNutrients.NA.label}(zout) {Math.round (productData.totalNutrients.NA.quantity*100)/100} {productData.totalNutrients.NA.unit}</p>
-                                </ul>
-                            </div>
-                        </section>
-                    }
-                </div>
+                    <div className="img-container"><img src={salad} alt=""/></div> :
+                    <div>
+                        {Object.keys(productData).length > 0 &&
+                            <section>
+                                <div className="product-name-container">
+                                    <h1>Voedingstoffen</h1>
+                                    <p>Deze waarden gelden voor het onbereide product.</p>
+                                    <h1>{productData.ingredients[0].text}</h1>
+                                    <div className="product-container">
+                                        <div>
+                                            <p>{productData.totalNutrients.ENERC_KCAL.label}</p>
+                                            <p>{productData.totalNutrients.FAT.label}</p>
+                                            <p>{productData.totalNutrients.FIBTG.label}(vezels)</p>
+                                            <p>{productData.totalNutrients.PROCNT.label}</p>
+                                            <p>{productData.totalNutrients.NA.label}(zout)</p>
+                                        </div>
+                                        <div>
+                                             <p>{Math.round(productData.totalNutrients.ENERC_KCAL.quantity * 100) / 100} {productData.totalNutrients.ENERC_KCAL.unit}</p>
+                                            <p>{Math.round(productData.totalNutrients.FAT.quantity * 100) / 100} {productData.totalNutrients.FAT.unit}</p>
+                                            <p>{Math.round(productData.totalNutrients.FIBTG.quantity * 100) / 100} {productData.totalNutrients.FIBTG.unit}</p>
+                                            <p>{Math.round(productData.totalNutrients.PROCNT.quantity * 100) / 100} {productData.totalNutrients.PROCNT.unit}</p>
+                                            <p>{Math.round(productData.totalNutrients.NA.quantity * 100) / 100} {productData.totalNutrients.NA.unit}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        }
+                    </div>
                 }
-
             </div>
         </div>
     );

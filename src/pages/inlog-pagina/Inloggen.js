@@ -23,10 +23,8 @@ function Inloggen() {
             console.error(e)
         }
     }
-
     return (
         <>
-
             <div className="formLabel-container">
                 <h1>Inloggen</h1>
                 Welkom bij de inlog pagina
