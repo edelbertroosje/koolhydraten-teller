@@ -43,6 +43,7 @@
 }
 /*aanpassing in the right container*/
 .right-container {
+    padding-bottom: 30px;
     background-color: white;
     flex-basis: 585px;
     border: 1px solid #BACBBF;
@@ -63,8 +64,18 @@
    padding-left: 50px;
     padding-right: 50px;
 }
+.product-name-container h1 {
+    font-size: 36px;
+}
+.product-name-container h2 {
+    font-size: 30px;
+}
 .img-container {
     background-color: #F8F9FA;
-
-
+}
+.product-name {
+    font-weight: bold;
+}
+.product-amount {
+    font-style: italic;
 }

@@ -25,12 +25,10 @@ function Registreren() {
             console.error(e)
         }
     }
-
 return (
     <div className="formLabel-container">
         <h1>Registreren</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eius error nihil optio quaerat,
-            temporibus vero! Amet autem beatae eos et fugiat iure magni, nihil non nostrum officia rem vero.</p>
+        <p>Vul uw gegevens in om te registren.</p>
 
         <form onSubmit={handleSubmit(onFormSubmit)}>
             <FormLabel

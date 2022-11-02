@@ -17,7 +17,7 @@ function Inloggen() {
                     "username": data.username,
                     "password": data.password,
                 })
-            login(response.data.accessToken);
+            login(response.data);
             console.log(response)
         } catch (e) {
             console.error(e)
@@ -30,11 +30,11 @@ function Inloggen() {
                 Welkom bij de inlog pagina
                 <form onSubmit={handleSubmit(onFormSubmit)}>
                     <FormLabel
-                        label="username:*" name="username" inputType="text" placeHolder="Uw gebruikersnaam"
+                        label="Gebruikersnaam:*" name="username" inputType="text" placeHolder="Uw gebruikersnaam"
                         register={register} errors={errors} validationObject={{
                         required: "gebruikersnaam mag niet leeg zijn",
                         minLength: {
-                            value: 6,
+                            value: 3,
                             message: "gebruikersnaam moet minstens 6 karakters lang zijn",
                         }
                     }}
@@ -42,10 +42,10 @@ function Inloggen() {
                     <FormLabel
                         label="Wachtwoord:*" name="password" inputType="password" placeHolder="Uw wachtwoord"
                         register={register} errors={errors} validationObject={{
-                        required: "gebruikersnaam mag niet leeg zijn",
+                        required: "wachtwoord mag niet leeg zijn",
                         minLength: {
                             value: 6,
-                            message: "gebruikersnaam moet minstens 6 karakters lang zijn",
+                            message: "wachtwoord moet minstens 6 karakters lang zijn",
                         }
                     }}
                     />

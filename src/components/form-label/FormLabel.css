@@ -5,9 +5,7 @@
     flex-direction: column;
     margin-left: 25%;
 }
-
 .formLabel-container label {
-
     text-align: start;
     display: flex;
     flex-direction: column;
@@ -15,7 +13,6 @@
     font-weight: bold;
     line-height: 30px;
 }
-
 .formLabel-container input {
     border-radius: 15px;
     padding: 10px;

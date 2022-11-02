@@ -50,16 +50,16 @@ function Home() {
                                 <div className="product-name-container">
                                     <h1>Voedingstoffen</h1>
                                     <p>Deze waarden gelden voor het onbereide product.</p>
-                                    <h1>{productData.ingredients[0].text}</h1>
+                                    <h2>{productData.ingredients[0].text}</h2>
                                     <div className="product-container">
-                                        <div>
+                                        <div className="product-name">
                                             <p>{productData.totalNutrients.ENERC_KCAL.label}</p>
                                             <p>{productData.totalNutrients.FAT.label}</p>
                                             <p>{productData.totalNutrients.FIBTG.label}(vezels)</p>
                                             <p>{productData.totalNutrients.PROCNT.label}</p>
                                             <p>{productData.totalNutrients.NA.label}(zout)</p>
                                         </div>
-                                        <div>
+                                        <div className="product-amount">
                                              <p>{Math.round(productData.totalNutrients.ENERC_KCAL.quantity * 100) / 100} {productData.totalNutrients.ENERC_KCAL.unit}</p>
                                             <p>{Math.round(productData.totalNutrients.FAT.quantity * 100) / 100} {productData.totalNutrients.FAT.unit}</p>
                                             <p>{Math.round(productData.totalNutrients.FIBTG.quantity * 100) / 100} {productData.totalNutrients.FIBTG.unit}</p>

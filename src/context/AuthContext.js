@@ -57,11 +57,21 @@ function AuthContextProvider({children}){
             localStorage.clear();
         }
     }
-    function login(token){
-        localStorage.setItem('token',token);
-        const decodedToken = jwtDecode(token)
+    function login(data){
+        console.log(data)
+        localStorage.setItem('token',data.accessToken);
         console.log('gebruiker is ingelogd')
-        fetchUserData(decodedToken.sub, token)
+        toggleIsAuth({
+            ...isAuth,
+            isAuth: true,
+            user: {
+                username:data.username,
+                email:data.email,
+                id:data.id,
+                role:data.role,
+            },
+            status: "done",
+        })
         history.push('/account')
     }
     function logout(){

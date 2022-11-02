@@ -1,13 +1,20 @@
-.account-container{
+.account-container {
+    padding-right: 35px;
+    padding-left: 35px;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
+.account-info {
+    padding-left: 100px;
+    text-align: left;
+}
 
 .form-field {
     display: flex;
-flex-direction: column;
+    flex-direction: column;
 }
-.label-container{
+
+.label-container {
 
 }

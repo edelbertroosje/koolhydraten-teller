@@ -1,16 +1,15 @@
 import React from 'react';
 import "./Popup.css"
-import {useHistory} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
+import close from '../../assets/logo/close.png';
 
 function Popup({children,}){
     const history = useHistory()
     return  (
         <div className="popup">
             <div className="popup-inner">
-                <button className="close-btn"
-                        onClick={()=>   history.push("/inloggen")}
+                <Link to="/inloggen" ><img src={close} alt=""/></Link>
 
-                >X</button>
                 {children}
 
             </div>

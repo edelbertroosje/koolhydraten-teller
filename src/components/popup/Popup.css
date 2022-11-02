@@ -4,11 +4,8 @@
     width: 45%;
     height: 30%;
     background-color: #BACBBF;
-
-
     display: flex;
     justify-content: center;
-
     align-items: center;
     align-content: center;
 }
@@ -18,8 +15,11 @@
     width: 100%;
     max-width: 500px;
 }
-.popup-inner .close-btn {
+.popup-inner img{
     position: absolute;
-    top: 0px;
-    right: 10px;
+    bottom: 265px;
+   left: 580px;
+    height: 20px;
+    width: 20px;
+
 }
