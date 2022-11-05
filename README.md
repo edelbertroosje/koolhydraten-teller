@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 Koolhydraten teller applicatie.
-
 
 Voor mijn eind opdracht bij hogeschool Novi heb ik een web-aplicatie gebouwd waar je bepaalde voedingswaarde kan zien van je dagelijkse producten.
 
 Probleemstelling en oplossing
-
 
 **1,2 miljoen Nederlanders hebben diabetes, dus 1 op de 14 Nederlanders. Om het hen iets gemakkelijker te maken voor al deze mensen, heb ik een applicatie
 ontwikkeld waar zij snel en gemakkelijk het aantal koolhydraten, vetten en andere
@@ -28,7 +25,6 @@ De voedingsstoffen zijn als volgt:
 Ik maak hierbij gebruik van de koolhydratentabel API (https://developer.edamam.com/edamam-nutrition-api) omdat deze API mij de data geeft van de voedingsstoffen per product.
 Ik maak gebruik van de NOVI backend om standaard gebruikersgegevens in op te slaan voor het registreren en inloggen.
 
-
 ![](../../Downloads/Koolhydratenteller_logo.png)
 
 Bestanden.
@@ -46,7 +42,7 @@ Components.
 
 Context - bevat de context data voor het inlog en registreren.
 
-pages - bevat alle pagina's.
+Pages - bevat alle pagina's.
 * Home.
 * Inlog-pagina
 * Mijn Account
@@ -63,7 +59,7 @@ Het installatieproces.
 De eerste stap is om het repository van Github te clonen, hiervoor dien je wel een githubaccount te hebben.
 voor meer informatie hoe je een account moet maken verwijs ik jullie naar > https://github.com/ <
 
-heb je geen github account en wil je alnog dit project clonen dan kan dit doen door de volgende link in je IDE te plaatsen.
+Heb je geen github account en wil je alnog dit project clonen dan kan dit doen door de volgende link in je IDE te plaatsen.
 
 - SSH: git@github.com:edelbertroosje/koolhydraten-teller.git
 - HTTPS: https://github.com/edelbertroosje/koolhydraten-teller.git
@@ -75,16 +71,14 @@ Dit project is gebouwd met de React framework
 Om de applicatie vervolgens draaiende te krijgen is het als tweede stap belangrijk om Node.js en NPM te installeren. Daarna installeer je de NPM packages om de app te kunnen runnen. Dit doe je met de volgende commando’s:
 
 npm install
-
 Met dit commando installeer je alle vereiste NPM packages.
 
 npm run start
-
 Met dit commando start je de app in development mode. Open http://localhost:3000 om de app in de browser te bekijken. De pagina zal automatisch herladen bij het maken van aanpassingen. Ook zie je alle errors in de console.
 
-De gebruiker kan momenteel alleen producten in het engels opzoeken, bijv. banana,apple chicken etc.. momenteel is het niet mogelijk om in andere talen op te zoeken. als een product niet aanwezig is moet de pagina ververst worden
+De gebruiker kan momenteel alleen producten in het engels opzoeken bijv: banana, apple chicken etc... Momenteel is het niet mogelijk om in andere talen op te zoeken. Als een product niet aanwezig is moet de pagina ververst worden.
 
-Voorbeeld fotos van de applicatie.
+Voorbeeld foto's van de applicatie.
 
 Home pagina.
 ![Eddy—Roosje-desktop-homepage_niet-ingelogd](https://user-images.githubusercontent.com/88483673/200117631-aa12d795-0c53-47e1-a7f2-81908b9c8e41.png)
