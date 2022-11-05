@@ -10,7 +10,6 @@ button{
     background-color: #006C52;
     text-transform: uppercase;
     cursor: pointer;
-
 }
 
 button:hover {background-color: #094839}

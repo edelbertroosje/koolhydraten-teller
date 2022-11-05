@@ -17,7 +17,7 @@ function Home() {
             console.log(result.data)
             setProductData(result.data)
             setToggleDiv(true)
-            console.log(data)
+
 
         } catch (e) {
             console.error(e)
@@ -53,14 +53,16 @@ function Home() {
                                     <h2>{productData.ingredients[0].text}</h2>
                                     <div className="product-container">
                                         <div className="product-name">
-                                            <p>{productData.totalNutrients.ENERC_KCAL.label}</p>
-                                            <p>{productData.totalNutrients.FAT.label}</p>
-                                            <p>{productData.totalNutrients.FIBTG.label}(vezels)</p>
-                                            <p>{productData.totalNutrients.PROCNT.label}</p>
-                                            <p>{productData.totalNutrients.NA.label}(zout)</p>
+                                            <p>Koolhydraten</p>
+                                            <p>Energie</p>
+                                            <p>Vet</p>
+                                            <p>Vezels</p>
+                                            <p>Proteïne</p>
+                                            <p>Zout</p>
                                         </div>
                                         <div className="product-amount">
-                                             <p>{Math.round(productData.totalNutrients.ENERC_KCAL.quantity * 100) / 100} {productData.totalNutrients.ENERC_KCAL.unit}</p>
+                                            <p>{Math.round(productData.totalNutrients.CHOCDF.quantity * 100) / 100} {productData.totalNutrients.ENERC_KCAL.unit}</p>
+                                            <p>{Math.round(productData.totalNutrients.ENERC_KCAL.quantity * 100) / 100} {productData.totalNutrients.ENERC_KCAL.unit}</p>
                                             <p>{Math.round(productData.totalNutrients.FAT.quantity * 100) / 100} {productData.totalNutrients.FAT.unit}</p>
                                             <p>{Math.round(productData.totalNutrients.FIBTG.quantity * 100) / 100} {productData.totalNutrients.FIBTG.unit}</p>
                                             <p>{Math.round(productData.totalNutrients.PROCNT.quantity * 100) / 100} {productData.totalNutrients.PROCNT.unit}</p>

@@ -1,5 +1,4 @@
 .formLabel-container {
-
     max-width: 50%;
     display: flex;
     flex-direction: column;
@@ -20,12 +19,10 @@
     margin-bottom: 10px;
     height: 50px;
 }
-
 .formLabel-row-container {
     display: flex;
     justify-content: space-between;
 }
-
 .checkbox-container {
     display: flex;
     flex-direction: row;

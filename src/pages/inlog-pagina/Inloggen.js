@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {AuthContext} from "../../context/AuthContext";
 import {Link} from "react-router-dom";
 import FormLabel from "../../components/form-label/FormLabel";
@@ -7,6 +7,7 @@ import axios from "axios";
 
 function Inloggen() {
     const {login} = useContext(AuthContext)
+    const [error, toggleError] = useState(false);
     const {handleSubmit, formState: {errors}, register} = useForm({mode: 'onBlur'});
 
     async function onFormSubmit(data) {
@@ -20,7 +21,8 @@ function Inloggen() {
             login(response.data);
             console.log(response)
         } catch (e) {
-            console.error(e)
+            console.error(e);
+            toggleError(true);
         }
     }
     return (
@@ -34,8 +36,8 @@ function Inloggen() {
                         register={register} errors={errors} validationObject={{
                         required: "gebruikersnaam mag niet leeg zijn",
                         minLength: {
-                            value: 3,
-                            message: "gebruikersnaam moet minstens 6 karakters lang zijn",
+                            value: 4,
+                            message: "gebruikersnaam moet minstens 4 karakters lang zijn",
                         }
                     }}
                     />
@@ -49,6 +51,7 @@ function Inloggen() {
                         }
                     }}
                     />
+                    {error && <p className="error">Combinatie van gebruikersnaam en wachtwoord is onjuist</p>}
                     <button type="submit">Inloggen</button>
                 </form>
                 <p>Heb je nog geen account? <Link to="/registreren">Registreer</Link> je dan eerst.</p>

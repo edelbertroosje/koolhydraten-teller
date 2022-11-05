@@ -29,6 +29,7 @@
 .home-form-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -45,13 +46,16 @@
 .right-container {
     padding-bottom: 30px;
     background-color: white;
-    flex-basis: 585px;
+    flex-basis: 565px;
     border: 1px solid #BACBBF;
     flex-grow: 1;
     border-radius: 25px;
 }
 .right-container img{
-    flex-grow: 1;
+   width: 100%;
+}
+.img-container {
+    background-color: #F8F9FA;
     max-width: 545px;
 }
 .product-container{
@@ -69,9 +73,6 @@
 }
 .product-name-container h2 {
     font-size: 30px;
-}
-.img-container {
-    background-color: #F8F9FA;
 }
 .product-name {
     font-weight: bold;

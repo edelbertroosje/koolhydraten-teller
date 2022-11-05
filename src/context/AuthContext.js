@@ -1,8 +1,7 @@
 import {createContext, useEffect, useState} from "react";
 import {useHistory} from "react-router-dom";
-import jwtDecode from "jwt-decode";
 import axios from "axios";
-import isTokenValid from "../helper/isTokenValid";
+
 export const AuthContext = createContext(null)
 
 function AuthContextProvider({children}){
@@ -13,23 +12,14 @@ function AuthContextProvider({children}){
         status: "pending",
     });
     useEffect(()=> {
-        console.log('de context is zojuist opnieuw opgestart!')
-        //is er een token
         const token = localStorage.getItem('token');
-        console.log(token)
-
-        if (token && isTokenValid(token)){
-            //is token nog geldig?
-            //zo ja haal gegevens op
-            const decodedToken = jwtDecode(token);
-            console.log(decodedToken);
-            fetchUserData(decodedToken.sub,token);
+        if (token){
+            fetchUserData(token);
         }else{
-            //zo nee? doe nis
             toggleIsAuth({
                 isAuth: false,
                 user: null,
-                status: 'done'})
+                status: 'done'});
         }
     },[])
     async function fetchUserData(token){
@@ -48,7 +38,7 @@ function AuthContextProvider({children}){
                     username: response.data.username,
                     email: response.data.email,
                     id: response.data.id,
-                    role: response.data.role,
+                    roles: response.data.roles,
                 },
                 status: "done",
             })
@@ -58,9 +48,7 @@ function AuthContextProvider({children}){
         }
     }
     function login(data){
-        console.log(data)
         localStorage.setItem('token',data.accessToken);
-        console.log('gebruiker is ingelogd')
         toggleIsAuth({
             ...isAuth,
             isAuth: true,
@@ -76,14 +64,12 @@ function AuthContextProvider({children}){
     }
     function logout(){
         localStorage.clear()
-
-        console.log('gebruiker is uitgelogd')
         toggleIsAuth({
             isAuth: false,
             user: null,
             status: "done",
         });
-        history.push('/home')
+        history.push('/')
     }
     const contextData = {
         isAuth: isAuth,
