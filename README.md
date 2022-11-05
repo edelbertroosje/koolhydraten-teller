@@ -25,7 +25,7 @@ De voedingsstoffen zijn als volgt:
 Ik maak hierbij gebruik van de koolhydratentabel API (https://developer.edamam.com/edamam-nutrition-api) omdat deze API mij de data geeft van de voedingsstoffen per product.
 Ik maak gebruik van de NOVI backend om standaard gebruikersgegevens in op te slaan voor het registreren en inloggen.
 
-![](../../Downloads/Koolhydratenteller_logo.png)
+![Koolhydratenteller_logo](https://user-images.githubusercontent.com/88483673/200127605-e73fc4ae-6236-489b-ac18-9b9def6d0fcd.png)
 
 Bestanden.
 
@@ -51,8 +51,13 @@ Pages - bevat alle pagina's.
 
 Gebruikers.
 
-Op deze pagina kan je Alleen als user registreren
-dit doe je door op het registratie pagina je gebruikersnaam, email, wachtwoord en je role als user in te vullen.
+Op deze pagina kan je Alleen als user registreren.
+Dit doe je door op het registratie pagina je gebruikersnaam, email, wachtwoord en je role als user in te vullen.
+
+Backend Novi
+Dit endpoint is vrij toegankelijk en is niet afgeschermd. Het is daarom een handig endpoint eerst te testen of het verbinden met de backend werkt. 
+Het testen van de endpoint doe je zo:
+open een nieuwe browser pagina en plaats de volgende link in:  https://frontend-educational-backend.herokuapp.com/api/test/all Tadaa..: "De API is bereikbaar."
 
 Het installatieproces.
 
