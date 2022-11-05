@@ -82,7 +82,9 @@ npm run start
 
 Met dit commando start je de app in development mode. Open http://localhost:3000 om de app in de browser te bekijken. De pagina zal automatisch herladen bij het maken van aanpassingen. Ook zie je alle errors in de console.
 
-Voorveld fotos van de applicatie.
+De gebruiker kan momenteel alleen producten in het engels opzoeken, bijv. banana,apple chicken etc.. momenteel is het niet mogelijk om in andere talen op te zoeken. als een product niet aanwezig is moet de pagina ververst worden
+
+Voorbeeld fotos van de applicatie.
 
 Home pagina.
 ![Eddy—Roosje-desktop-homepage_niet-ingelogd](https://user-images.githubusercontent.com/88483673/200117631-aa12d795-0c53-47e1-a7f2-81908b9c8e41.png)
