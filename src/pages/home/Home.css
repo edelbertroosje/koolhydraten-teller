@@ -51,12 +51,9 @@
     flex-grow: 1;
     border-radius: 25px;
 }
-.right-container img{
-   width: 100%;
-}
 .img-container {
     background-color: #F8F9FA;
-    max-width: 545px;
+    flex-basis: 565px;
 }
 .product-container{
     display: flex;

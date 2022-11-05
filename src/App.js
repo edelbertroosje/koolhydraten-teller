@@ -20,7 +20,7 @@ function App(){
                 <Header/>
                 <Switch>
                     <Route exact path="/"><Home/></Route>
-                    <Route path="/account">{isAuth.isAuth ? <Account/> : <Redirect to="/" />}</Route>
+                    <Route path="/account">{isAuth.isAuth ? <Account/> : <Redirect to="/"/>}</Route>
                     <Route path="/registreren"><Registreren/></Route>
                     <Route path="/inloggen"><Inloggen/></Route>
                     <Route path="/privacy"><Privacy/></Route>
@@ -28,7 +28,6 @@ function App(){
                 </Switch>
                 <Footer/>
             </div>
-
         </div>
     );
 }

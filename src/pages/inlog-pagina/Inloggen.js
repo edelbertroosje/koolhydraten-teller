@@ -11,7 +11,6 @@ function Inloggen() {
     const {handleSubmit, formState: {errors}, register} = useForm({mode: 'onBlur'});
 
     async function onFormSubmit(data) {
-        {console.log(data)}
         try {
             const response = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signin',
                 {
@@ -19,7 +18,6 @@ function Inloggen() {
                     "password": data.password,
                 })
             login(response.data);
-            console.log(response)
         } catch (e) {
             console.error(e);
             toggleError(true);

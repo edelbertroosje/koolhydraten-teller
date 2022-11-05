@@ -12,9 +12,8 @@ const Account = () => {
         status: "pending",
     });
 
-    function navitagte(){
-        history.push("/wijzigen")
-    }
+    function navigate(){history.push("/wijzigen")}
+
     useEffect(() => {
 
         async function fetchProfileData() {
@@ -46,19 +45,19 @@ const Account = () => {
         fetchProfileData();
     }, [])
 
-
     return (
         <>
             {Object.keys(profileData).length >0 &&
                 <div className="account-container">
                     <h1>Mijn Account</h1>
                     <h2>Hoi {profileData.username}</h2>
+                    <p>Hier heb je toegang tot je account en kun je deze wijzigen.</p>
                     <div className="account-info">
                         <h2>Mijn gegevens</h2>
                         <p>gebruikersnaam: {profileData.username}</p>
                         <p>E-mail: {profileData.email}</p>
                         <p>{profileData.roles[0].name} </p>
-                        <button onClick={navitagte}>Wachtwoord wijzigen</button>
+                        <button onClick={navigate}>Wachtwoord wijzigen</button>
                     </div>
                     <form className="form-field">
                     </form>

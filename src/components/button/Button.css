@@ -13,11 +13,3 @@ button{
 }
 
 button:hover {background-color: #094839}
-
-button:active {
-
-    background-color: #006C52;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-
-}

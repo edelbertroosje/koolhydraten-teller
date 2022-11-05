@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import axios from "axios";
-import './Registreren.css'
 import FormLabel from "../../components/form-label/FormLabel";
 import Popup from "../../components/popup/Popup";
 import {useHistory} from "react-router-dom";
@@ -11,9 +10,7 @@ function Registreren() {
     const [popup, togglePopup] = useState(false)
     const {handleSubmit, formState: {errors}, register} = useForm({mode: 'onBlur'});
 
-    function navitagte(){
-        history.push("/inloggen")
-    }
+    function navitagte(){history.push("/inloggen")}
 
     async function onFormSubmit(data) {
         try {
@@ -53,7 +50,6 @@ return (
                 label="Role:*" name="role" inputType="text" placeHolder="user of admin"
                 register={register} errors={errors} validationObject={{required: "Role mag niet leeg zijn"}}
             />
-
             <button
                 type="submit" className="registratie-btn" onClick={() => togglePopup(true)}>
                 Registreren
@@ -64,9 +60,7 @@ return (
             <h1>U bent succesvol geregistreerd.</h1>
             <h2>U kunt nu inloggen.</h2>
         </Popup>}
-
     </div>
 );
 }
-
 export default Registreren;

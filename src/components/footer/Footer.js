@@ -1,8 +1,8 @@
 import React from 'react';
 import './Footer.css'
 import {Link} from "react-router-dom";
-import facebook from '../../assets/Facebook.png';
-import linkedin from '../../assets/Linkedin.png';
+import facebook from '../../assets/icons/Facebook.png';
+import linkedin from '../../assets/icons/Linkedin.png';
 
 const Footer = () => {
     return (

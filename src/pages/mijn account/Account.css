@@ -9,12 +9,8 @@
     padding-left: 100px;
     text-align: left;
 }
-
 .form-field {
     display: flex;
     flex-direction: column;
 }
 
-.label-container {
-
-}

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './Home.css';
-import salad from '../../assets/img/foto-home.png';
+import salad from '../../assets/img/fotoHome.webp';
 import FormLabel from "../../components/form-label/FormLabel";
 import {useForm} from "react-hook-form";
 import Button from "../../components/button/Button";
@@ -10,46 +10,48 @@ function Home() {
     const {handleSubmit, formState: {errors}, register} = useForm({mode: 'onBlur'});
     const [productData, setProductData] = useState({})
     const [toggleDiv, setToggleDiv] = useState(false)
+    const [error, toggleError] = useState(false);
+
 
     async function onFormSubmit(data) {
         try {
-            const result = await axios.get(`https://api.edamam.com/api/nutrition-data?app_id=6681e6ff&app_key=247487ba48a1dff6c6c241eae12c5251&nutrition-type=logging&ingr=${data.Voornaam}`)
+            const result = await axios.get(`https://api.edamam.com/api/nutrition-data?app_id=6681e6ff&app_key=247487ba48a1dff6c6c241eae12c5251&nutrition-type=logging&ingr=${data.product}`)
             console.log(result.data)
             setProductData(result.data)
             setToggleDiv(true)
-
-
         } catch (e) {
             console.error(e)
+            toggleError(true);
         }
     }
-
     return (
         <div className="homepage-container">
             <div className="left-container">
                 <h1>Koolhydraten teller</h1>
-                <p>Op koolhydraten teller.nl kunt u zien hoeveel koolhydraten in producten zitten. Ook vindt u het
+                <p>Op koolhydraten teller kunt u zien hoeveel koolhydraten in producten zitten. Ook vindt u het
                     aantal calorieën en de hoeveelheid vet. Dit is vooral van belang voor mensen met een low carb dieet
                     of mensen die het Atkins dieet volgen.
                 </p>
+                <p><em>Let op: 👀 de producten dienen in het engels ingevoerd te worden.</em></p>
                 <form className="home-form-container" onSubmit={handleSubmit(onFormSubmit)}>
                     <FormLabel
-                        name="Voornaam" inputType="text" placeHolder="banaan" size="50"
+                        name="product" inputType="text" placeHolder="banana" size="50"
                         register={register} errors={errors} validationObject={{
                         required: "input mag niet leeg zijn"}}
                     />
-                    <Button name="zoeken" type="submit"/>
+                    <Button  name="zoeken" type="submit"/>
                 </form>
+                {error && <p className="error">Er ging iets mis!! uw gekozen prodruct staat niet in onze data</p>}
+
             </div>
-            <div className="right-container">
+            <div>
                 {!toggleDiv ?
-                    <div className="img-container"><img src={salad} alt=""/></div> :
-                    <div>
+                    <div className="img-container"><img src={salad} alt=""  width="575px"/></div> :
+                    <div className="right-container">
                         {Object.keys(productData).length > 0 &&
-                            <section>
                                 <div className="product-name-container">
                                     <h1>Voedingstoffen</h1>
-                                    <p>Deze waarden gelden voor het onbereide product.</p>
+                                    <p><strong>Deze waarden gelden voor het onbereide product.</strong></p>
                                     <h2>{productData.ingredients[0].text}</h2>
                                     <div className="product-container">
                                         <div className="product-name">
@@ -61,7 +63,7 @@ function Home() {
                                             <p>Zout</p>
                                         </div>
                                         <div className="product-amount">
-                                            <p>{Math.round(productData.totalNutrients.CHOCDF.quantity * 100) / 100} {productData.totalNutrients.ENERC_KCAL.unit}</p>
+                                            <p>{Math.round(productData.totalNutrients.CHOCDF.quantity * 100) / 100} {productData.totalNutrients.CHOCDF.unit}</p>
                                             <p>{Math.round(productData.totalNutrients.ENERC_KCAL.quantity * 100) / 100} {productData.totalNutrients.ENERC_KCAL.unit}</p>
                                             <p>{Math.round(productData.totalNutrients.FAT.quantity * 100) / 100} {productData.totalNutrients.FAT.unit}</p>
                                             <p>{Math.round(productData.totalNutrients.FIBTG.quantity * 100) / 100} {productData.totalNutrients.FIBTG.unit}</p>
@@ -70,7 +72,6 @@ function Home() {
                                         </div>
                                     </div>
                                 </div>
-                            </section>
                         }
                     </div>
                 }

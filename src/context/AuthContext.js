@@ -30,7 +30,6 @@ function AuthContextProvider({children}){
                     Authorization: `Bearer ${token}`,
                 }
             });
-            console.log(response.data)
             toggleIsAuth({
                 ...isAuth,
                 isAuth: true,
@@ -43,7 +42,6 @@ function AuthContextProvider({children}){
                 status: "done",
             })
         }catch(error){
-            console.error('There was an error!', error);
             localStorage.clear();
         }
     }

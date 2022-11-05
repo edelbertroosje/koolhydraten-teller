@@ -14,7 +14,7 @@ function Header(){
                 <ul>
                     <li>{ isAuth.isAuth && <NavLink to="/account">Mijn account</NavLink>}</li>
                     {isAuth.isAuth ?
-                        <button type="button" onClick={logout} to="/">Uitloggen</button>
+                        <button className="button-nav" type="button" onClick={logout} to="/">Uitloggen</button>
                         :
                         <li><NavLink to="/inloggen">Inloggen</NavLink></li>
                     }

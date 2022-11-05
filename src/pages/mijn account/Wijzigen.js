@@ -12,7 +12,7 @@ const Account = () => {
     const token = localStorage.getItem('token');
     const history = useHistory();
 
-    function navitagte(){
+    function navigate(){
         history.push("/account")
     }
 
@@ -37,24 +37,24 @@ const Account = () => {
     return (
         <div className="formLabel-container">
             <h1>Mijn Account</h1>
+            <p>Vul een nieuw wachtwoord in om deze te wijzigen.</p>
 
             <form onSubmit={handleSubmit(onFormSubmit)}>
-
                 <FormLabel
-                    label="nieuw wachtwoord:*" name="password" inputType="password" placeHolder="Uw wachtwoord"
+                    label="Nieuw wachtwoord*" name="password" inputType="password" placeHolder="Uw wachtwoord"
                     register={register} errors={errors} validationObject={{
                     required: "Uw wachtwoord mag niet leeg zijn",
                     minLength: {value: 6, message: "Uw wachtwoord moet minstens 6 karakters lang zijn"}}}
                 />
                 <FormLabel
-                    label="herhaal wachtwoord:*" name="repeatedPassword" inputType="password" placeHolder="Uw wachtwoord"
+                    label="Herhaal wachtwoord*" name="repeatedPassword" inputType="password" placeHolder="Uw wachtwoord"
                     register={register} errors={errors} validationObject={{
                     required: "Uw wachtwoord mag niet leeg zijn",
                     minLength: {value: 6, message: "Uw wachtwoord moet minstens 6 karakters lang zijn"}}}
                 />
                 <button type="submit" onClick={() => togglePopup(true)}>Wijzigen</button>
             </form>
-            {popup && <Popup trigger={popup} setTrigger={togglePopup} onClick={navitagte}
+            {popup && <Popup trigger={popup} setTrigger={togglePopup} onClick={navigate}
                              btnName="Sluiten">
                 <h1>Uw wachtwoord is gewijzigd.</h1>
                 <h2>U kunt terug naar uw account.</h2>
