@@ -85,19 +85,24 @@ Met dit commando start je de app in development mode. Open http://localhost:3000
 Voorveld fotos van de applicatie.
 
 Home pagina.
-![img_1.png](img_1.png)
+![Eddy—Roosje-desktop-homepage_niet-ingelogd](https://user-images.githubusercontent.com/88483673/200117631-aa12d795-0c53-47e1-a7f2-81908b9c8e41.png)
+
 
 Home pagina-product pagina
-![img_2.png](img_2.png) 
+![Eddy-Roosje-desktop-productdetail](https://user-images.githubusercontent.com/88483673/200117635-10839cf1-88bb-4953-8171-ffbf3892d00e.png)
+
 
 Registratie pagina
-![img_3.png](img_3.png)
+![Eddy—Roosje—desktop-Registreren](https://user-images.githubusercontent.com/88483673/200117643-52247846-7dc1-4d27-85e7-be632884fecd.png)
+
 
 Inlog pagina
-![img_5.png](img_5.png)
+![Eddy—Roosje—desktop-login](https://user-images.githubusercontent.com/88483673/200117615-d271c71d-6a0a-40a5-abc3-cebd2f3d4916.png)
+
 
 Account pagina
-![img_4.png](img_4.png)
+![Eddy—Roosje—desktop-mijn account](https://user-images.githubusercontent.com/88483673/200117650-a229f41a-73ca-4bba-93ae-fa415fe199f4.png)
+
 
 
 
