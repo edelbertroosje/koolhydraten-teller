@@ -45,8 +45,6 @@ Components.
 
 Context - bevat de context data voor het inlog en registreren.
 
-pages - bevat alle pagina's.
-
 Pages - bevat alle pagina's.
 
 * Home.
@@ -56,7 +54,6 @@ Pages - bevat alle pagina's.
 * Registreer pagia
 
 Gebruikers.
-
 
 Op deze pagina kan je Alleen als user registreren
 dit doe je door op het registratie pagina je gebruikersnaam, email, wachtwoord en je role als user in te vullen.
@@ -69,14 +66,10 @@ Dit endpoint is vrij toegankelijk en is niet afgeschermd. Het is daarom een hand
 Het testen van de endpoint doe je zo:
 open een nieuwe browser pagina en plaats de volgende link in:  https://frontend-educational-backend.herokuapp.com/api/test/all Tadaa..: "De API is bereikbaar."
 
-
 Het installatieproces.
-
 De eerste stap is om het repository van Github te clonen, hiervoor dien je wel een githubaccount te hebben.
 Voor meer informatie hoe je een account moet maken verwijs ik jullie naar > https://github.com/ <
 
-
-heb je geen github account en wil je alnog dit project clonen dan kan dit doen door de volgende link in je IDE te plaatsen.
 
 Heb je geen github account en wil je alnog dit project clonen dan kan dit doen door de volgende link in je IDE te plaatsen.
 
@@ -94,11 +87,7 @@ Met dit commando installeer je alle vereiste NPM packages.
 
 npm run start
 Met dit commando start je de app in development mode. Open http://localhost:3000 om de app in de browser te bekijken. De pagina zal automatisch herladen bij het maken van aanpassingen. Ook zie je alle errors in de console.
-
 Met dit commando installeer je alle vereiste NPM packages.
-
-npm run start
-Met dit commando start je de app in development mode. Open http://localhost:3000 om de app in de browser te bekijken. De pagina zal automatisch herladen bij het maken van aanpassingen. Ook zie je alle errors in de console.
 
 De gebruiker kan momenteel alleen producten in het engels opzoeken bijv: banana, apple chicken etc... Momenteel is het niet mogelijk om in andere talen op te zoeken. Als een product niet aanwezig is moet de pagina ververst worden.
 

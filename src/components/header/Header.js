@@ -8,7 +8,7 @@ function Header(){
     const { isAuth, logout} = useContext(AuthContext)
 
     return (
-        <div className="nav-container">
+        <header className="nav-container">
             <div className="logo-container"> <Link to="/"><img src={logo} alt="koolhydraten"/></Link></div>
             <nav className="nav-list">
                 <ul>
@@ -20,7 +20,7 @@ function Header(){
                     }
                 </ul>
             </nav>
-        </div>
+        </header>
     );
 };
 

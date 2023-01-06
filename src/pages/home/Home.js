@@ -26,7 +26,8 @@ function Home() {
     }
     return (
         <div className="homepage-container">
-            <div className="left-container">
+            <article className="left-container">
+                <section>
                 <h1>Koolhydraten teller</h1>
                 <p>Op koolhydraten teller kunt u zien hoeveel koolhydraten in producten zitten. Ook vindt u het
                     aantal calorieën en de hoeveelheid vet. Dit is vooral van belang voor mensen met een low carb dieet
@@ -43,8 +44,9 @@ function Home() {
                 </form>
                 {error && <p className="error">Er ging iets mis!! uw gekozen prodruct staat niet in onze data</p>}
 
-            </div>
-            <div>
+                </section>
+                </article>
+            <aside>
                 {!toggleDiv ?
                     <div className="img-container"><img src={salad} alt=""  width="575px"/></div> :
                     <div className="right-container">
@@ -75,7 +77,7 @@ function Home() {
                         }
                     </div>
                 }
-            </div>
+            </aside>
         </div>
     );
 }
