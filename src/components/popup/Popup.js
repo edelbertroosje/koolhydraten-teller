@@ -1,7 +1,5 @@
 import React from 'react';
 import "./Popup.css"
-import { useHistory} from "react-router-dom";
-
 
 function Popup({children, onClick, btnName}) {
 

@@ -25,7 +25,7 @@ function Inloggen() {
     }
     return (
         <>
-            <div className="formLabel-container">
+            <main className="formLabel-container">
                 <h1>Inloggen</h1>
                 Welkom bij de inlog pagina
                 <form onSubmit={handleSubmit(onFormSubmit)}>
@@ -53,7 +53,7 @@ function Inloggen() {
                     <button type="submit">Inloggen</button>
                 </form>
                 <p>Heb je nog geen account? <Link to="/registreren">Registreer</Link> je dan eerst.</p>
-            </div>
+            </main>
         </>
     );
 }

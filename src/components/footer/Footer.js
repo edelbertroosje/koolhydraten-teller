@@ -6,7 +6,7 @@ import linkedin from '../../assets/icons/Linkedin.png';
 
 const Footer = () => {
     return (
-            <div className="footer-container">
+            <footer className="footer-container">
                 <div className="links-container">
                     <h3>Links</h3>
                     <Link to={{pathname:"https://www.diabeter.nl"}} target="_blank">Diabeter.nl</Link>
@@ -28,7 +28,7 @@ const Footer = () => {
                     <img src={linkedin} alt=""/>
                     <img src={facebook} alt=""/>
                 </div>
-            </div>
+            </footer>
     );
 };
 
