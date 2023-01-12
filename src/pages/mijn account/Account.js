@@ -10,6 +10,7 @@ const Account = () => {
     function navigate(){history.push("/wijzigen")}
 
     return (
+        <>
                 <main className="account-container">
                     <h1>Mijn Account</h1>
                     <h2>Hoi {user.username}</h2>
@@ -24,6 +25,7 @@ const Account = () => {
                     <form className="form-field">
                     </form>
                 </main>
+            </>
     );
 };
 export default Account;
