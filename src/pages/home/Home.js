@@ -16,9 +16,9 @@ function Home() {
     async function onFormSubmit(data) {
         try {
             const result = await axios.get(`https://api.edamam.com/api/nutrition-data?app_id=6681e6ff&app_key=247487ba48a1dff6c6c241eae12c5251&nutrition-type=logging&ingr=${data.product}`)
-            console.log(result.data)
             setProductData(result.data)
             setToggleDiv(true)
+
         } catch (e) {
             console.error(e)
             toggleError(true);
@@ -45,6 +45,7 @@ function Home() {
                 {error && <p className="error">Er ging iets mis!! uw gekozen prodruct staat niet in onze data</p>}
 
                 </section>
+
                 </article>
             <aside>
                 {!toggleDiv ?

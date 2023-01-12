@@ -16,8 +16,6 @@ const Account = () => {
         history.push("/account")
     }
 
-
-
     async function onFormSubmit(data)  {
             try {
                 const response = await axios.put(`https://frontend-educational-backend.herokuapp.com/api/user`, {
