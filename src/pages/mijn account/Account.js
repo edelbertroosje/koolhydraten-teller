@@ -11,7 +11,6 @@ const Account = () => {
 
     return (
         <>
-
                 <main className="account-container">
                     <h1>Mijn Account</h1>
                     <h2>Hoi {user.username}</h2>
