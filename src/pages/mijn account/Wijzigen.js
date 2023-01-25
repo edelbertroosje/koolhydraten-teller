@@ -16,8 +16,6 @@ const Account = () => {
         history.push("/account")
     }
 
-
-
     async function onFormSubmit(data)  {
             try {
                 const response = await axios.put(`https://frontend-educational-backend.herokuapp.com/api/user`, {
@@ -35,7 +33,7 @@ const Account = () => {
         }
 
     return (
-        <div className="formLabel-container">
+        <main className="formLabel-container">
             <h1>Mijn Account</h1>
             <p>Vul een nieuw wachtwoord in om deze te wijzigen.</p>
 
@@ -59,7 +57,7 @@ const Account = () => {
                 <h1>Uw wachtwoord is gewijzigd.</h1>
                 <h2>U kunt terug naar uw account.</h2>
             </Popup>}
-        </div>
+        </main>
     );
 };
 

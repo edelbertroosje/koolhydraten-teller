@@ -25,7 +25,7 @@ function Registreren() {
         }
     }
 return (
-    <div className="formLabel-container">
+    <main className="formLabel-container">
         <h1>Registreren</h1>
         <p>Vul uw gegevens in om te registren.</p>
 
@@ -60,7 +60,7 @@ return (
             <h1>U bent succesvol geregistreerd.</h1>
             <h2>U kunt nu inloggen.</h2>
         </Popup>}
-    </div>
+    </main>
 );
 }
 export default Registreren;

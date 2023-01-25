@@ -1,124 +1,60 @@
 
-Koolhydraten teller applicatie.
+**Koolhydraten teller applicatie.**
+Voor mijn eindopdracht bij hogeschool Novi heb ik een web-applicatie gebouwd waarmee je de voedingswaarden van je dagelijkse producten kunt bekijken.
 
-Voor mijn eind opdracht bij hogeschool Novi heb ik een web-aplicatie gebouwd waar je bepaalde voedingswaarde kan zien van je dagelijkse producten.
+Probleemstelling en oplossing:
+Ongeveer 1,2 miljoen Nederlanders hebben diabetes, wat neerkomt op ongeveer 1 op de 14 Nederlanders. Om het hen iets gemakkelijker te maken, heb ik een applicatie ontwikkeld waar zij snel en eenvoudig het aantal koolhydraten, vetten en andere voedingsstoffen van producten kunnen opzoeken.
 
-Probleemstelling en oplossing
+De app is niet alleen bedoeld voor mensen met diabetes, maar ook voor mensen met overgewicht die willen afvallen, sporters die op hun voeding willen letten of voor iedereen die een gezonder leven wil leiden. Mijn doel is om mensen meer inzicht te geven in wat ze dagelijks binnenkrijgen aan voedingsstoffen. Door mensen daar bewuster van te maken, zullen ze ook beter leren omgaan met wat ze eten en hun gezondheid. Dit kan uiteindelijk leiden tot een gezondere samenleving.
 
-**1,2 miljoen Nederlanders hebben diabetes, dus 1 op de 14 Nederlanders. Om het hen iets gemakkelijker te maken voor al deze mensen, heb ik een applicatie
-ontwikkeld waar zij snel en gemakkelijk het aantal koolhydraten, vetten en andere
-voedingsstoffen van producten kunnen opzoeken.**
-
-De app is niet alleen voor mensen met diabetes, maar ook voor mensen met overgewicht die willen afvallen, sporters die op hun voeding willen letten, maar ook voor mensen die een gezonder leven willen leiden.
-
-Ik wil mensen meer inzicht geven van wat ze dagelijks binnen krijgen aan voedingsstoffen. Door mensen daar bewuster van te maken, zullen ze ook beter leren omgaan met wat ze eten en hun gezondheid. Wat uiteindelijk leidt tot een gezondere samenleving.
-• Als gebruiker kun je je registreren en inloggen.
-• Als gebruiker kun je de naam van het product invullen, zodat de applicatie een
-berekening maakt van het precieze aantal voedingsstoffen.
-De voedingsstoffen zijn als volgt:
-- koolhydraten
-- calorieën
-- vetten
-- vezels
-- proteïne
-- zout
-
-Ik maak hierbij gebruik van de koolhydratentabel API (https://developer.edamam.com/edamam-nutrition-api) omdat deze API mij de data geeft van de voedingsstoffen per product.
-Ik maak gebruik van de NOVI backend om standaard gebruikersgegevens in op te slaan voor het registreren en inloggen.
-
+Als gebruiker kun je je registreren en inloggen. Je kunt vervolgens de naam van het product invullen en de applicatie maakt een berekening van het precieze aantal voedingsstoffen, waaronder koolhydraten, calorieën, vetten, vezels, proteïne en zout.
 
 ![Koolhydratenteller_logo](https://user-images.githubusercontent.com/88483673/200127605-e73fc4ae-6236-489b-ac18-9b9def6d0fcd.png)
 
 
-Bestanden.
-
+**Bestanden.**
 Dit project bevat de volgende mappen:
 
 Assets, bevat alle afbeeldingen.
 
-Components.
-* Buttons - een button die op meerder pagina's wordt gebruikt.
-* Footer - voor aan de onderkant van de webpagina. Deze is zichtbaar op elke pagina.
-* Form-label - deze component bevat het input en label voor overal waar je gegevens moet invullen(home pagina, inlog en registreer pagina).
-* Header - deze component bevat de navigatie en het logo van het website, deze is zichtbaar op alle pagina's. 
-* Popup - bevat een melding wanneer je bent geregistreerd of wanneer je gegevens zijn gewijzigd
+Components:
+ 1. Buttons - een button die op meerder pagina's wordt gebruikt.
+2.  Footer - voor aan de onderkant van de webpagina. Deze is zichtbaar op elke pagina.
+3. Form-label - deze component bevat het input en label voor overal waar je gegevens moet invullen(home pagina, inlog en registreer pagina).
+4. Header - deze component bevat de navigatie en het logo van het website, deze is zichtbaar op alle pagina's.
+5. Popup - bevat een melding wanneer je bent geregistreerd of wanneer je gegevens zijn gewijzigd
 
-Context - bevat de context data voor het inlog en registreren.
+Context:
+- bevat de context data voor het inlog en registreren.
 
-pages - bevat alle pagina's.
-
-Pages - bevat alle pagina's.
-
-* Home.
-* Inlog-pagina
-* Mijn Account
-* Privacy pagina (lorem ipsum)
-* Registreer pagia
-
-Gebruikers.
-
-
-Op deze pagina kan je Alleen als user registreren
-dit doe je door op het registratie pagina je gebruikersnaam, email, wachtwoord en je role als user in te vullen.
-
-Op deze pagina kan je Alleen als user registreren.
-Dit doe je door op het registratie pagina je gebruikersnaam, email, wachtwoord en je role als user in te vullen.
-
-Backend Novi
-Dit endpoint is vrij toegankelijk en is niet afgeschermd. Het is daarom een handig endpoint eerst te testen of het verbinden met de backend werkt. 
-Het testen van de endpoint doe je zo:
-open een nieuwe browser pagina en plaats de volgende link in:  https://frontend-educational-backend.herokuapp.com/api/test/all Tadaa..: "De API is bereikbaar."
-
+Pages:
+  1. Home.
+  2. Inlog-pagina.
+  3. Mijn Account.
+  4. Privacy pagina (lorem ipsum).
+  5. Registreer pagina/
 
 Het installatieproces.
 
-De eerste stap is om het repository van Github te clonen, hiervoor dien je wel een githubaccount te hebben.
-Voor meer informatie hoe je een account moet maken verwijs ik jullie naar > https://github.com/ <
+Stap 1: 
+Ga naar de website van GitHub (https://github.com/) en clone het repository van de "koolhydraten teller applicatie" door één van de volgende methodes te gebruiken:
+   1. SSH: git@github.com:edelbertroosje/koolhydraten-teller.git
+   2. HTTPS: https://github.com/edelbertroosje/koolhydraten-teller.git
+   3. GitHub CLI: gh repo clone edelbertroosje/koolhydraten-teller
 
+Stap 2:
+Zorg ervoor dat je de juiste software hebt geïnstalleerd om de applicatie uit te voeren. Dit project is gebouwd met React Native.
 
-heb je geen github account en wil je alnog dit project clonen dan kan dit doen door de volgende link in je IDE te plaatsen.
+Stap 3:
+Ga naar de map waar je het repository hebt gedownload en voer de volgende commando's uit om de benodigde packages te installeren:
+  -npm install
 
-Heb je geen github account en wil je alnog dit project clonen dan kan dit doen door de volgende link in je IDE te plaatsen.
+Stap 4:
+Start de applicatie door het volgende commando uit te voeren:
+  -npm start
 
-- SSH: git@github.com:edelbertroosje/koolhydraten-teller.git
-- HTTPS: https://github.com/edelbertroosje/koolhydraten-teller.git
-- GitHub CLI: gh repo clone edelbertroosje/koolhydraten-teller
+Stap 5:
+Open de applicatie in je browser op de volgende link: http://localhost:3000/
 
-Applicatie starten
-
-Dit project is gebouwd met de React framework
-Om de applicatie vervolgens draaiende te krijgen is het als tweede stap belangrijk om Node.js en NPM te installeren. Daarna installeer je de NPM packages om de app te kunnen runnen. Dit doe je met de volgende commando’s:
-
-npm install
-Met dit commando installeer je alle vereiste NPM packages.
-
-npm run start
-Met dit commando start je de app in development mode. Open http://localhost:3000 om de app in de browser te bekijken. De pagina zal automatisch herladen bij het maken van aanpassingen. Ook zie je alle errors in de console.
-
-Met dit commando installeer je alle vereiste NPM packages.
-
-npm run start
-Met dit commando start je de app in development mode. Open http://localhost:3000 om de app in de browser te bekijken. De pagina zal automatisch herladen bij het maken van aanpassingen. Ook zie je alle errors in de console.
-
-De gebruiker kan momenteel alleen producten in het engels opzoeken bijv: banana, apple chicken etc... Momenteel is het niet mogelijk om in andere talen op te zoeken. Als een product niet aanwezig is moet de pagina ververst worden.
-
-Voorbeeld foto's van de applicatie.
-
-Home pagina.
-![Eddy—Roosje-desktop-homepage_niet-ingelogd](https://user-images.githubusercontent.com/88483673/200117631-aa12d795-0c53-47e1-a7f2-81908b9c8e41.png)
-
-
-Home pagina-product pagina
-![Eddy-Roosje-desktop-productdetail](https://user-images.githubusercontent.com/88483673/200117635-10839cf1-88bb-4953-8171-ffbf3892d00e.png)
-
-
-Registratie pagina
-![Eddy—Roosje—desktop-Registreren](https://user-images.githubusercontent.com/88483673/200117643-52247846-7dc1-4d27-85e7-be632884fecd.png)
-
-
-Inlog pagina
-![Eddy—Roosje—desktop-login](https://user-images.githubusercontent.com/88483673/200117615-d271c71d-6a0a-40a5-abc3-cebd2f3d4916.png)
-
-
-Account pagina
-![Eddy—Roosje—desktop-mijn account](https://user-images.githubusercontent.com/88483673/200117650-a229f41a-73ca-4bba-93ae-fa415fe199f4.png)
+Stap 6:
+Registreer of log in om gebruik te maken van de applicatie. Je kunt nu producten zoeken en de voedingswaarde bekijken.
